@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "ReelEase: Relax and enjoy media with ReelEase",
+  "description": "Enjoy the convenience of video controls on insta reels. Pause, play, forward or rewind your media content without any disruptions",
+  "icons": {
+    "128": "icon-128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*.instagram.com/reels/*"],
+      "js": ["contentScript.bundle.js"],
+      "css": ["content.styles.css"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["content.styles.css", "icon-128.png", "icon-34.png"],
+      "matches": []
+    }
+  ]
+}
